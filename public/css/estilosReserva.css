@@ -4,82 +4,85 @@ body{
     font-family: Arial, sans-serif;
 }
 /*estilos para el header*/
-.header{
-    display: flex;
-    width: 100%;
-    height: 2.4rem;
-    background-color: #180942;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-    -ms-text-combine-horizontal: right;
+.caja{
+    display: grid; /* Activa el modo de grid */
+    place-items: center; /* Centra el contenido horizontal y verticalmente */
+    min-height: 100vh; /* Asegura que el body tenga al menos la altura completa de la pantalla */
+    background-color: #f0f0f0; /* Color de fondo opcional */
+    
 }
-/* estilos para el logo*/
+header{
+    display: flex; /* Activa el modo flexbox */
+    justify-content: flex-end; /* Alinea horizontalmente el contenido a la derecha */
+    align-items: center; /* Centra verticalmente el contenido dentro del header */
+    height: 70px;
+    background: rgb(11, 2, 56); /* Aumenta la opacidad al pasar el cursor */
+    color: #00f2fe;
+}
+header:hover {
+    background: rgba(0, 0, 0, 0.8); /* Aumenta la opacidad al pasar el cursor */
+    color: #00f2fe;
+}
+
+a{
+    padding-right: 20px;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color:#00f2fe ;
+    font-size: 27px;
+}
+a:hover {
+    color: violet; /* Aumenta la opacidad al pasar el cursor */
+    text-shadow: 0 0 10px #e0e0ff, 0 0 20px #e0e0ff, 0 0 30px #e0e0ff, 0 0 40px violet, 0 0 70px violet;
+    
+}
 .logo {
-    padding: 0;
-    margin: 0;
-    width: 200px;
+    margin-right: 21.5%;
+    padding: 10px 20px;
     border: 2px solid #6a5acd;
     font-size: 2em;
     color: #6a5acd; /* Color base */
     border-radius: 50%;
     text-align: center;
-    background: linear-gradient(135deg, #4facfe, #00f2fe, #6a5acd); /* Gradient de colores */
+    background: linear-gradient(135deg, #4facfe, #00f2fe, #6a5acd);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     position: relative;
     transition: color 0.3s ease;
     cursor: pointer;
-    text-shadow: 0 0 10px #6a5acd, 0 0 20px #6a5acd, 0 0 30px #6a5acd;/* sombra para el logo*/
+    text-shadow: 0 0 10px #6a5acd, 0 0 20px #6a5acd, 0 0 30px #6a5acd;
 }
+
 .logo:hover {
     color: #e0e0ff; /* Cambia a un color más claro al hacer hover */
     text-shadow: 0 0 10px #e0e0ff, 0 0 20px #e0e0ff, 0 0 30px #e0e0ff, 0 0 40px violet, 0 0 70px violet;
     background: linear-gradient(135deg, violet, #ff00ff);
     background-clip: text;
-    -webkit-background-clip: text; /* Para que el texto tenga el efecto de sombra */
+    -webkit-background-clip: text;
     color: transparent;
     
 }
 /* estilos para el nombre */
 .nombreRestaurante{
-    width: 260px;
+    width: 600px;
     height: 40px;
-    margin-left: 27%;
+    margin-left: 0%;
+    margin-right: 1%;
     margin-top: 0;
     margin-bottom: 2px;
-    font-size: 23px;
+    font-size: 43px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-shadow: 0 0 10px #09d33c, 0 0 20px #a4e60d, 0 0 30px #0abe19;/* sombra para el logo*/
 }
-/* estilos para cerrarsesion*/
-.cerrarSesion{
-    align-items: end;
-    justify-content: center;
+main{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    height: 100%;
-    width: 10%;
-    margin: 0;
-    margin-top: 10px;
-    margin-left: 25%;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 1em;
+    margin: 1em;
+    width: 70%;
+    margin-top: 100px;
+    margin-left: 200px;   
 }
-/* estilos para el boton de cerrar sesion*/
-header .botonT{
-    background: none; 
-    border: none; 
-    color: #fff; 
-    cursor: pointer; 
-    text-decoration: none;
-    font: 1em sans-serif;
-}
-/* estilos para el boton de cerrar sesion*/
-header .botonT:hover{
-    color: #e0e0ff; /* Cambia a un color más claro al hacer hover */
-    text-shadow: 0 0 10px #e0e0ff, 0 0 20px #e0e0ff, 0 0 30px #e0e0ff, 0 0 40px violet, 0 0 70px violet;
-    background: linear-gradient(135deg, rgb(12, 128, 206), #0a18d6);
-    background-clip: text;
-    -webkit-background-clip: text; /* Para que el texto tenga el efecto de sombra */
-    color: transparent;
-    }
