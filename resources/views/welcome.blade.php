@@ -100,7 +100,7 @@
 <body>
 
     <header>
-        <h1 class="titulo">Proyecto</a></h1>
+        <h2 class="titulo">Proyecto</a></h1>
         <a href="{{ route('login') }}">Login</a>
         <a href="{{ route('register') }}">Registro</a> <!-- Asegúrate de que esta línea esté correcta -->
     </header>
