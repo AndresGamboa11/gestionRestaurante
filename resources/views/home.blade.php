@@ -8,23 +8,21 @@
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="{{ route('reservas') }}">Reservas</a></li>
-                <li><a href="{{ route('pedidos') }}">Pedidos</a></li>
-                <li><a href="{{ route('inventario') }}">Inventario</a></li>
-                <li>
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <button type="submit">Cerrar Sesión</button>
-                    </form>
-                </li>
-            </ul>
+        <nav class="header">
+           <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button type="submit">Cerrar Sesión</button>
+            </form>
         </nav>
     </header>
     <main>
         <h1>Bienvenido a la Gestión del Restaurante</h1>
         <p>Utiliza el menú para acceder a los diferentes módulos.</p>
+        <nav class="menu">
+            <a href="{{ route('reservas') }}">Reservas</a>
+            <a href="{{ route('pedidos') }}">Pedidos</a>
+            <a href="{{ route('inventario') }}">Inventario</a>
+        </nav>
     </main>
 </body>
 </html>
