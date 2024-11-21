@@ -11,7 +11,14 @@
         <h2 class="logo">Proyecto</a></h2>
         <p class="nombreRestaurante">Restaurante "El Colombiano"</p>
         <a href="{{ route('home') }}""></a>
-        <a href="{{ route('logout') }}">Cerrar sesión</a> 
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
+        
+        <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Cerrar sesión
+        </a>
+        
     </header>
     <main>
         <h1>Bienvenido a la Gestión del Restaurante</h1>

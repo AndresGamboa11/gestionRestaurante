@@ -16,11 +16,17 @@ Route::get('/', function () {
 })->name('welcome');
 
 // Ruta para el inicio de sesión
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
-
+Route::middleware('guest')->group(function () {
+    Route::get('/login', function () {
+       return view('auth.login');
+    })->name('login');
+});
 Route::post('/login', [LoginController::class, 'login'])->name('login.post');
+
+//gestion de sesiones
+Route::middleware(['web'])->group(function () {
+    Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+});
 
 // Ruta registro
 Route::get('/register', function () {
@@ -28,7 +34,7 @@ Route::get('/register', function () {
 })->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.post');
 
-// Ruta para cerrar sesión
+
 // Ruta para cerrar sesión
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 

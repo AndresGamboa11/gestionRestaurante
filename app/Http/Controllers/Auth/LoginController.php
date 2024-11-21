@@ -1,10 +1,10 @@
 <?php
-
-
 namespace App\Http\Controllers\Auth;
+
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 
 class LoginController extends Controller
@@ -49,4 +49,21 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
         $this->middleware('auth')->only('logout');
     }
+   
+    
+    public function logout(Request $request)
+    {
+        // Cierra sesión del usuario
+        Auth::logout();
+
+        // Invalida la sesión
+        $request->session()->invalidate();
+
+        // Regenera el token CSRF
+        $request->session()->regenerateToken();
+
+        // Redirige a la página principal
+        return redirect('/');
+    }
 }
+
