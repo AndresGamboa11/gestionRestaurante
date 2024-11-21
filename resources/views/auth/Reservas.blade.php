@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <h2 class="logo">Proyecto</a></h2>
-        <p class="nombreRestaurante">Restaurante El Colombiano</p>
+        <p class="nombreRestaurante">Restaurante "El Colombiano"</p>
         <a href="{{ route('home') }}">Inicio</a>
         <a href="{{ route('logout') }}">Cerrar sesión</a> 
     </header>

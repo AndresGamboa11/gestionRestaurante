@@ -29,10 +29,8 @@ Route::get('/register', function () {
 Route::post('/register', [RegisterController::class, 'store'])->name('register.post');
 
 // Ruta para cerrar sesión
-Route::post('/logout', function () {
-    Auth::logout();
-    return redirect('/'); // Redirige a la página de inicio después de cerrar sesión
-})->name('logout');
+// Ruta para cerrar sesión
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Crear una ruta para la vista login.blade.php
 Route::get('/home', function () {
